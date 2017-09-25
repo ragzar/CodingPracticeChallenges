@@ -1,4 +1,4 @@
-package co.hakerrank.challenges.crackingthecodinginterview ;
+package co.challenges.hakerrank.crackingthecodinginterview ;
 
 import java.util.Scanner;
 

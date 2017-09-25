@@ -1,4 +1,4 @@
-package co.hakerrank.challenges;
+package co.challenges.hakerrank;
 import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.Map;

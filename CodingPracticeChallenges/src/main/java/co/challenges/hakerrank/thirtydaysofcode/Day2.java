@@ -1,4 +1,4 @@
-package co.hakerrank.challenges.thirtydaysofcode;
+package co.challenges.hakerrank.thirtydaysofcode;
 import java.util.Scanner;
 
 public class Day2 {
