@@ -12,5 +12,11 @@ public class Day7 {
             arr[i] = in.nextInt();
         }
         in.close();
+        
+        String response = "";
+        for (int i = arr.length -1 ; i>=0 ; i--) {
+        		response += arr[i] +" ";
+        }
+        System.out.println(response.trim());
     }
 }
