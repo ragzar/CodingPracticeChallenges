@@ -13,7 +13,7 @@ public class Day10 {
 		String binaryNumber = Integer.toBinaryString(decimalNumber);
 		for (Character bit : binaryNumber.toCharArray()) {
 			if (bit.equals('1'))
-				++count;
+				count++;
 			if (count > result) {
 				result = count;
 			}

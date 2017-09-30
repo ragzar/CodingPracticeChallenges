@@ -14,10 +14,9 @@ public class SumOfK {
 			return 0;
 		else if (ls.size() == 0)
 			return null;
-		
+
 		List<Integer> rest = ls.subList(1, ls.size());
-		System.out.println(rest);
-		
+
 		Integer b1 = chooseBestSum(t, k, rest);
 		Integer b2 = chooseBestSum(t - ls.get(0), k - 1, rest);
 		if (b2 == null)
