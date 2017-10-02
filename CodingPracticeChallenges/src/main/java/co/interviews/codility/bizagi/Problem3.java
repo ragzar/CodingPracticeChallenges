@@ -18,7 +18,7 @@ public class Problem3 {
 				result += "" + first[i] + second[i] + aString.substring(i + 1);
 				break;
 			} else if (first.length == i + 1) {
-				result += first[i] + bString.substring(i);
+				result += "" + first[i] + bString.substring(i);
 				break;
 			} else {
 				result += "" + first[i] + second[i];
@@ -27,14 +27,13 @@ public class Problem3 {
 		int answer = 0;
 		try {
 			answer = Integer.parseInt(result);
+			if (answer >= MAX_VALUE)
+				return -1;
+			else
+				return answer;
 		} catch (NumberFormatException e) {
 			return -1;
 		}
-
-		if (answer >= MAX_VALUE)
-			return -1;
-		else
-			return answer;
 	}
 
 	public static void main(String args[]) {
