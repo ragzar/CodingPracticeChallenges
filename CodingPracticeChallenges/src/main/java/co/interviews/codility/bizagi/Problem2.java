@@ -6,52 +6,63 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-class Problem2 {
-	public static int solution(int[] A) {
+class Problem2
+{
+    public static int solution(int[] A)
+    {
 
-		int max = 0;
-		for (int i = 0; i < A.length; i++) {
-			int[] right = Arrays.copyOfRange(A, 0, i + 1);
-			int[] left = Arrays.copyOfRange(A, i + 1, A.length);
+        int max = 0;
+        for (int i = 0; i < A.length; i++)
+        {
 
-			if (left.length == 0)
-				break;
+            if (i + 1 > A.length)
+                break;
 
-			Integer maxLeft = IntStream.of(left).boxed().reduce(Integer::max).orElse(0);
-			Integer maxRight = IntStream.of(right).boxed().reduce(Integer::max).orElse(0);
+            int[] right = Arrays.copyOfRange(A, 0, i + 1);
+            int[] left = Arrays.copyOfRange(A, i + 1, A.length);
 
-			if (max < maxRight - maxLeft)
-				max = maxRight - maxLeft;
-		}
-		return max;
-	}
+            Integer maxLeft = IntStream.of(left).boxed().reduce(Integer::max).orElse(0);
+            Integer maxRight = IntStream.of(right).boxed().reduce(Integer::max).orElse(0);
 
-	public static int solutionBruteForce(int[] A) {
-		int max = 0;
-		for (int i = 0; i < A.length; i++) {
-			int[] left = Arrays.copyOfRange(A, 0, i + 1);
-			int[] right = Arrays.copyOfRange(A, i + 1, A.length);
+            int difference = maxRight - maxLeft;
 
-			List<Integer> rightList = IntStream.of(right).boxed().collect(Collectors.toList());
-			List<Integer> leftList = IntStream.of(left).boxed().collect(Collectors.toList());
-			if (rightList.isEmpty())
-				break;
+            if (max < difference)
+                max = difference;
+        }
+        return max;
+    }
 
-			Collections.sort(rightList);
-			Collections.sort(leftList);
 
-			int maxRight = rightList.get(rightList.size() - 1);
-			int maxLeft = leftList.get(leftList.size() - 1);
+    public static int solutionBruteForce(int[] A)
+    {
+        int max = 0;
+        for (int i = 0; i < A.length; i++)
+        {
+            int[] left = Arrays.copyOfRange(A, 0, i + 1);
+            int[] right = Arrays.copyOfRange(A, i + 1, A.length);
 
-			if (max < maxLeft - maxRight)
-				max = maxLeft - maxRight;
+            List<Integer> rightList = IntStream.of(right).boxed().collect(Collectors.toList());
+            List<Integer> leftList = IntStream.of(left).boxed().collect(Collectors.toList());
+            if (rightList.isEmpty())
+                break;
 
-		}
-		return max;
-	}
+            Collections.sort(rightList);
+            Collections.sort(leftList);
 
-	public static void main(String args[]) {
-		int i[] = { 1, 3, -3 };
-		System.out.println(solution(i));
-	}
+            int maxRight = rightList.get(rightList.size() - 1);
+            int maxLeft = leftList.get(leftList.size() - 1);
+
+            if (max < maxLeft - maxRight)
+                max = maxLeft - maxRight;
+
+        }
+        return max;
+    }
+
+
+    public static void main(String args[])
+    {
+        int i[] = {1, 3, -3};
+        System.out.println(solution(i));
+    }
 }
