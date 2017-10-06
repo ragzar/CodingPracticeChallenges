@@ -17,8 +17,13 @@ public class Day11 {
 		// }
 		// in.close();
 
-		int arr[][] = { { 1, 1, 1, 0, 0, 0 }, { 0, 1, 0, 0, 0, 0 }, { 1, 1, 1, 0, 0, 0 }, { 0, 0, 2, 4, 4, 0 },
-				{ 0, 0, 0, 2, 0, 0 }, { 0, 0, 1, 2, 4, 0 } };
+		int arr[][] = 
+			{ { 1, 1, 1, 0, 0, 0 }, 
+		      { 0, 1, 0, 0, 0, 0 }, 
+		      { 1, 1, 1, 0, 0, 0 }, 
+		      { 0, 0, 2, 4, 4, 0 },
+			  { 0, 0, 0, 2, 0, 0 }, 
+			  { 0, 0, 1, 2, 4, 0 } };
 
 		List<Integer> response = new ArrayList<>();
 
@@ -40,9 +45,8 @@ public class Day11 {
 			y = 0;
 		}
 
-		Collections.sort(response);
+		System.out.println(Collections.max(response));
 
-		System.out.println(response.get(15));
 
 		bestSolution(arr);
 

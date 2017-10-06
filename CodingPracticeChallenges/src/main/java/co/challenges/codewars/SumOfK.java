@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 public class SumOfK {
 
 	public static Integer chooseBestSum(int t, int k, List<Integer> ls) {
+		
 		if (t < 0)
 			return null;
 		else if (k == 0)
@@ -62,14 +63,15 @@ public class SumOfK {
 		}
 
 		List<Integer> result = new ArrayList<>();
+		
 		combinations(ls, k).stream().map(l -> l.stream().mapToInt(i -> i).sum()).forEach(result::add);
+		
 		result = result.stream().filter(s -> s <= t).collect(Collectors.toList());
+		
 		if (result.size() == 0)
 			return null;
 
-		Collections.sort(result);
-
-		return result.get(result.size() - 1);
+		return Collections.max(result);
 
 	}
 
