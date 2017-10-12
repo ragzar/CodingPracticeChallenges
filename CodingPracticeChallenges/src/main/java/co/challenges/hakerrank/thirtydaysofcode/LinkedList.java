@@ -2,20 +2,20 @@ package co.challenges.hakerrank.thirtydaysofcode;
 
 import java.util.Scanner;
 
-class Node {
+class Node15 {
 	int data;
-	Node next;
+	Node15 next;
 
-	Node(int d) {
+	Node15(int d) {
 		data = d;
 		next = null;
 	}
 }
 
-public class Day15 {
+public class LinkedList {
 
-	public static Node insert(Node head, int data) {
-		Node newElement = new Node(data);
+	public static Node15 insert(Node15 head, int data) {
+		Node15 newElement = new Node15(data);
 		
 		if (head == null)
 			return newElement;
@@ -27,8 +27,8 @@ public class Day15 {
 		return head ;
 	}
 
-	public static void display(Node head) {
-		Node start = head;
+	public static void display(Node15 head) {
+		Node15 start = head;
 		while (start != null) {
 			System.out.print(start.data + " ");
 			start = start.next;
@@ -37,7 +37,7 @@ public class Day15 {
 
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
-		Node head = null;
+		Node15 head = null;
 //		int N = sc.nextInt();
 
 //		while (N-- > 0) {

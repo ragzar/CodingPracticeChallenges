@@ -10,7 +10,7 @@ class Printer<T> {
 
 }
 
-public class Day21 {
+public class Generics {
 
 	public static void main(String args[]) {
 		Scanner scanner = new Scanner(System.in);

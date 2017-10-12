@@ -2,7 +2,7 @@ package co.challenges.hakerrank.thirtydaysofcode;
 
 import java.util.Arrays;
 
-public class Day20 {
+public class Sorting {
 
 	public static int[] responseArray;
 
@@ -16,7 +16,7 @@ public class Day20 {
 		// in.close();
 
 		
-		int a[] = { 3, 2, 1 ,7,5,9};
+		int a[] = {11, 3, 2, 8, 1 ,7,5,9};
 		int n= a.length;
 		System.out.println(Arrays.toString(a));
 
@@ -38,6 +38,7 @@ public class Day20 {
 				if (a[j] > a[j + 1]) {
 					swap(a, j);
 					numberOfSwaps++;
+					System.out.println(Arrays.toString(a) + j);
 				}
 			}
 			totalSwaps += numberOfSwaps;

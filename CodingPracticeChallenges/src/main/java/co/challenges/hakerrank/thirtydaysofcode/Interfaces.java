@@ -22,7 +22,7 @@ class Calculator implements AdvancedArithmetic {
 
 }
 
-class Day19 {
+class Interfaces {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);

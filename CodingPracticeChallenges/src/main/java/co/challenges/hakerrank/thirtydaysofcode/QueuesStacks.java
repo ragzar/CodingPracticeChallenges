@@ -4,7 +4,7 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class Day18 {
+public class QueuesStacks {
 
 	Queue<Character> queue = new ArrayDeque<>();
 	ArrayDeque<Character> stack = new ArrayDeque<>();
@@ -34,7 +34,7 @@ public class Day18 {
 		char[] s = input.toCharArray();
 
 		// Create a Solution object:
-		Day18 p = new Day18();
+		QueuesStacks p = new QueuesStacks();
 
 		// Enqueue/Push all chars to their respective data structures:
 		for (char c : s) {

@@ -2,7 +2,7 @@ package co.challenges.hakerrank.thirtydaysofcode;
 
 import java.util.Scanner;
 
-class Day12 {
+class Inheritance {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		String firstName = scan.next();

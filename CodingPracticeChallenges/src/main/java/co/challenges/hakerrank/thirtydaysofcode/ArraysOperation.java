@@ -2,7 +2,7 @@ package co.challenges.hakerrank.thirtydaysofcode;
 import java.util.Scanner;
 
 
-public class Day7 {
+public class ArraysOperation {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

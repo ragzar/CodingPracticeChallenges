@@ -1,6 +1,6 @@
 package co.challenges.hakerrank.thirtydaysofcode;
 import java.util.Scanner;
-public class Day3 {
+public class ConditionalStatements {
    
    public static void main(String[] args) {
       Scanner scan = new Scanner(System.in);

@@ -2,7 +2,7 @@ package co.challenges.hakerrank.thirtydaysofcode;
 
 import java.util.Scanner;
 
-public class Day10 {
+public class BinaryNumbers {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);

@@ -50,7 +50,7 @@ class MyBook extends Book {
 	}
 }
 
-public class Day13 {
+public class AbstractClasess {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);

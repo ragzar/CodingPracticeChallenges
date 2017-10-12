@@ -2,7 +2,7 @@ package co.challenges.hakerrank.thirtydaysofcode;
 
 import java.util.Scanner;
 
-public class Day16 {
+public class Exceptions {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);

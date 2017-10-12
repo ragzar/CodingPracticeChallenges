@@ -13,7 +13,7 @@ import java.util.Scanner;
 //edward
 //harry
 
-class Day8 {
+class DictionaresAndMaps {
 	public static void main(String[] argh) {
 		Scanner in = new Scanner(System.in);
 		int n = in.nextInt();

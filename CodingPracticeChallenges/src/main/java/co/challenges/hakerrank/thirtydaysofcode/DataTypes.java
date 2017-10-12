@@ -1,7 +1,7 @@
 package co.challenges.hakerrank.thirtydaysofcode;
 import java.util.Scanner;
 
-public class Day1 {
+public class DataTypes {
 	
     public static void main(String[] args) {
         int i = 4;
